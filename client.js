@@ -13,8 +13,14 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected!")
     conn.write("Name: JH")
-  })
-  
+    // setTimeout(() => {
+    //   conn.write("Move: up")
+    // }, 1000)
+    // setInterval(() => {
+    //   conn.write("Move: left")
+    // }, 50)
+  });
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
 

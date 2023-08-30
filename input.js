@@ -12,24 +12,13 @@ const setupInput = (conn) => {
 };
 
 const handleUserInput = (key) => {
-  if (key === '\u0003') {
-    process.exit()
-  }
-  if (key === 'w') {
-    connection.write("Move: up")
-  }
-  if (key === 's') {
-    connection.write("Move: down")
-
-  }
-  if (key === 'a') {
-    connection.write("Move: left")
-
-  }
-  if (key === 'd') {
-    connection.write("Move: right")
-
-  }
+  key === '\u0003' ? process.exit() : null
+  key === 'w' ? connection.write("Move: up") : null
+  key === 's' ? connection.write("Move: down") : null
+  key === 'a' ? connection.write("Move: left") : null
+  key === 'd' ? connection.write("Move: right") : null;
+  key === 'r' ? connection.write("Say: MOVE!") : null;
+  key === 'q' ? connection.write("Say: BYE!!") : null;
 }
 
 module.exports = {
